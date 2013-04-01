@@ -1,6 +1,3 @@
-concordion-extensions demo
-=========================
-
 Introduction
 ------------------
 
@@ -98,3 +95,7 @@ If your proxy requires authentication, you will also need to set the properties 
 Mailing List
 -----------------
 Feel free to discuss these examples on the Concordion [mailing list](http://tech.groups.yahoo.com/group/concordion).
+
+See Also
+-------------
+The Extensions Library source code at https://github.com/concordion/concordion-extensions
