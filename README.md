@@ -1,15 +1,16 @@
-Concordion-Extensions Selenium2 Demo
+concordion-extensions demo
 =========================
 
 Introduction
 ------------------
 
-This project demonstrates the usage of the Concordion [ExtensionsLibrary](http://concordion.org/ExtensionsLibrary.html) with [Selenium WebDriver](http://code.google.com/p/selenium/w/list).
+This project demonstrates the usage of the Concordion [ExtensionsLibrary](http://concordion.org/ExtensionsLibrary.html) with [Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/).
 
 It contains an ExtensionsDemo index page that links to and runs the following tests:
-    - ScreenshotDemo demonstrates the [ScreenshotExtension](http://concordion.org/extensions/ScreenshotExtension.html).
-    - LoggingDemo demonstrates the [LoggingTooltipExtension](http://concordion.org/extensions/LoggingTooltipExtension.html).
-    - ExceptionTranslatorDemo demonstrates the [TranslatorExtension](http://concordion.org/extensions/TranslatorExtension.html).
+
+- ScreenshotDemo demonstrates the [ScreenshotExtension](http://concordion.org/extensions/ScreenshotExtension.html).
+- LoggingDemo demonstrates the [LoggingTooltipExtension](http://concordion.org/extensions/LoggingTooltipExtension.html).
+- ExceptionTranslatorDemo demonstrates the [TranslatorExtension](http://concordion.org/extensions/TranslatorExtension.html).
     
 Running the tests
 ---------------------------
@@ -19,7 +20,7 @@ The tests use Selenium's FirefoxDriver, so you'll need to have Firefox installed
 The download includes support to run the tests with either <a href="http://www.gradle.org/">Gradle</a> or <a href="http://maven.apache.org/">Maven</a>.  
     
 ### Using Gradle
-1. [Download](<a href="http://www.gradle.org/downloads.html">) and [install](http://www.gradle.org/installation.html) Gradle (this has been tested with 1.0-milestone-3)
+1. [Download](http://www.gradle.org/downloads.html) and [install](http://www.gradle.org/installation.html) Gradle (this has been tested with 1.0-milestone-3)
 1. Unzip this package
 1. From a command line opened at the location to which this package has been unzipped, run `gradle clean test`
 1. View the Concordion output under the subfolder `build/reports/spec/org/concordion/ext/demo/selenium/`
@@ -33,11 +34,11 @@ The download includes support to run the tests with either <a href="http://www.g
 ### Generating an Eclipse Project
 If you use Eclipse and want to generate an Eclipse project:
 
-1. [Download](<a href="http://www.gradle.org/downloads.html">) and [install](http://www.gradle.org/installation.html) Gradle (this has been tested with 1.0-milestone-3)
+1. [Download](http://www.gradle.org/downloads.html) and [install](http://www.gradle.org/installation.html) Gradle (this has been tested with 1.0-milestone-3)
 1. Unzip this package
 1. From a command line opened at the location to which this package has been unzipped, run `gradle cleanEclipse eclipse`
 1. From Eclipse, the project can be imported from the `File` > `Import...` menu by selecting the import source `General` > `Existing Projects into Workspace`. Make sure the workspace is in a different folder than the project.
-1. In Eclipse's Project Explorer, expand `src/test/java`  `org.concordion.ext.demo.selenium`, and run each of the tests `LoggingDemoTest` and `ScreenshotDemoTest` using `Run As` > `JUnit Test`.
+1. In Eclipse's Project Explorer, expand `src/test/java` > `org.concordion.ext.demo.selenium`, and run each of the tests `LoggingDemoTest` and `ScreenshotDemoTest` using `Run As` > `JUnit Test`.
 
 
 What you should see
@@ -47,12 +48,12 @@ The tests will open a Firefox browser and perform some Google searches.
 ### JUnit output
 The tests should pass successfully, though the console output for the ScreenshotDemo and ExceptionTranslatorDemo tests will show failures and exceptions with the message:
 
->       <-- Note: This test has been marked as EXPECTED_TO_FAIL
+> <-- Note: This test has been marked as EXPECTED_TO_FAIL
 
-These tests deliberately contains failures in order to demonstrate features.  They uses Concordion's `@ExpectedToFail` annotation to keep the JUnit passing (you'd normally only use this when you have a partially implemented feature).
+These tests deliberately contains failures in order to demonstrate features.  They use Concordion's `@ExpectedToFail` annotation to keep the JUnit passing (you'd normally only use this when you have a partially implemented feature).
 
 ### Concordion output
-The output folder should contain 4 specifications:
+The output folder should contain the following 4 specifications.
 
 #### ExtensionsDemo.html
 This contains links to the following specifications.
@@ -68,7 +69,7 @@ It can also be used to [explicitly add screenshots](http://concordion.org/extens
 
 This should show 2 blue information icons.  Hover over these icons to show information logged during the running of the example.
 
-The bulk of the output is logged by the `SeleniumEventLogger` class, which implements [WebDriverEventListener](http://webdriver.googlecode.com/svn/javadoc/org/openqa/selenium/support/events/WebDriverEventListener.html). 
+The bulk of the output is logged by the `SeleniumEventLogger` class, which implements [WebDriverEventListener](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/support/events/WebDriverEventListener.html). 
 
 The result text is logged from the `GoogleResultsPage`.
 
@@ -90,7 +91,7 @@ The easiest way to do this may be to add the following lines to the Site() const
 >    System.setProperty("http.proxyHost", "<i>proxy.host</i>");
 >    System.setProperty("http.proxyPort", "<i>proxy.port</i>");
 
-where <i>proxy.host</i> is the host name of the proxy server, and <i>proxy.port</i> is the port number.
+where <i>`proxy.host`</i> is the host name of the proxy server, and <i>`proxy.port`</i> is the port number.
 
 If your proxy requires authentication, you will also need to set the properties `http.ProxyUser` and `http.proxyPassword`.
   
