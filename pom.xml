@@ -48,6 +48,12 @@
       <artifactId>concordion</artifactId>
       <version>${concordion.version}</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>xml-apis</groupId>
+          <artifactId>xml-apis</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
@@ -78,6 +84,7 @@
       <version>${slf4j.version}</version>
       <scope>runtime</scope>
     </dependency>
+
     
   </dependencies>
 
@@ -111,7 +118,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <selenium.version>[2.23.0,3.0.0)</selenium.version>
+    <selenium.version>2.33.0</selenium.version>
     <slf4j.version>1.6.1</slf4j.version>    
     <concordion.version>1.4.3</concordion.version>
     <concordion-extensions.version>1.1.0</concordion-extensions.version>
